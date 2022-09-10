@@ -37,9 +37,7 @@ body {
 
 .hero img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-        
+    height: 100%;       
         
 }
 
@@ -113,28 +111,33 @@ body {
 }
 
 .callout {
+    display: grid;
+    align-items: center;
+    background-image: url('/assets/imgs/beercup-mobile.webp');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 100vw;
-    height: auto;
-   
+    height:  100%;
 }
 
-.callout img {
+/* .callout img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
+} */
 
 
 
 .callout p {
-    position: absolute;
-    top: 1950px;
+    /* position: absolute;
+    top: 1950px; */
     font-family: 'Beth Ellen', cursive;
     font-weight: 400;
     font-size: 2.2rem;
-    line-height: 59px;
+    line-height: 49px;
     text-align: center;
-    padding: 0 30px;
+    padding: 15px 30px;
     
     color: #FFFFFF;
 
@@ -198,7 +201,7 @@ footer .author {
     .callout p {
         font-size: 1.6rem;
         line-height: 49px;
-        top: 1980px;
+        
     }
 }
 
@@ -211,7 +214,7 @@ footer .author {
     .callout p {
         font-size: 1.8rem;
         line-height: 49px;
-        top: 1980px;
+        
     }
 }
 
@@ -243,6 +246,18 @@ footer .author {
     }
 }
 
+@media (min-width: 600px) {
+    
+    .callout p {
+        font-size: 3.3rem;
+        line-height: 100px;
+        top: 2200px;
+    }
+
+   
+}
+
+
 
 @media (width: 768px) {
    
@@ -252,8 +267,8 @@ footer .author {
 
     .callout p {
         font-size: 5rem;
-        line-height: 100px;
-        top: 2550px;
+        line-height: 115px;
+        top: 2500px;
     }
 
     .pics {
@@ -299,32 +314,32 @@ footer .author {
     }
 }
 
-@media (width: 834px) {
-   
+@media screen and (min-width: 834px) {
+    
     .big-logo {
-        top: 1000px;
+        top: 490px;
     }
 
     .callout p {
-        font-size: 5rem;
-        line-height: 100px;
-        top: 2550px;
+        font-size: 4.7rem;
+        line-height: 120px;
+        padding: 15px;
     }
 
     .pics {
         display: grid;
         width: 100%;
         height: auto;
-        grid-template-columns: repeat(2, 384px);
-        grid-template-rows: repeat(4, 329px);
+        grid-template-columns: repeat(2, 417px);
+        grid-template-rows: repeat(4, auto);
         
     }
 
     .img1 {
         
         grid-area: 1 / 1 / 3 / 2;
-        width: 384px;
-        height: 658px;
+        width: 100%;
+        height: 100%;
         
     }
 
@@ -332,7 +347,7 @@ footer .author {
         aspect-ratio: 1 / 1;
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        
         
         
         
@@ -353,22 +368,81 @@ footer .author {
         height: 35px;
     }
 
+
+}
+
+@media  screen and (min-width: 1024px) {
+  
+    .hero {
+        width: 100vw;
+        height: auto;
+
+   }
+
+   
+    .hero img {
+        width: 100%;
+        height: 100%;    
+            
+    }
+   
+    nav .mobile {
+        display: none;
+    }
+
+    .big-logo {
+        height: 354px;
+        width: 897px;
+        left: 50%;
+        right: 50%;
+        top: 25%;
+        transform: translate(-50%, -50%);           
+
+    }
+    
+    .desktop-menu {
+        display: flex;
+        width: 100%;
+        height: auto;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #000000;
+        font-family: RootBeer;
+        padding-top: 20px;
+    }
+
+    .desktop-menu--logo img {
+        width: 155px;
+        height: 50px;
+        margin-left: 70px;
+    }
+
+    .desktop-menu ul li {
+        list-style: none;
+        display: inline-block;   
+        margin-right: 40px;   
+    }
+
+    .desktop-menu ul {
+        margin-right: 30px;
+    }
+
+    .desktop-menu ul li a {
+        color: #FFFFFF;
+        text-decoration: none;
+        font-size: 2.6rem;
+
+    }
     
 }
 
+@media  screen and (min-width: 1280px) {
+  
+    .big-logo {
+        top: 50%;          
 
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
+    
+}
