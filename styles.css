@@ -22,7 +22,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     
 }
@@ -31,15 +31,16 @@ body {
 .hero {
     width: 100vw;
     height: 100%;
-    
         
 }
 
 .hero img {
-    width: 100%;
-    height: 100%;       
-        
+        width: 100%;
+        height: 100%;  
 }
+        
+        
+
 
 .mobile {
     position: absolute;
@@ -49,6 +50,10 @@ body {
     margin-top: 20px;
     padding: 0 20px 0 20px;
 
+}
+
+.desktop-menu {
+    display: none;
 }
 
 .mobile .nav-hammenu--mobile, .nav-wsp--mobile{
@@ -63,7 +68,8 @@ body {
 .big-logo {
     position: absolute;
     width: 100%;
-    top: 231px;   
+    top: 50%;
+    /* top: calc(50% - 100%/2);    */
     
 }
 
@@ -110,6 +116,10 @@ body {
     margin-bottom: 20px;
 }
 
+.box6 {
+    display: none;
+}
+
 .callout {
     display: grid;
     align-items: center;
@@ -130,8 +140,7 @@ body {
 
 
 .callout p {
-    /* position: absolute;
-    top: 1950px; */
+    
     font-family: 'Beth Ellen', cursive;
     font-weight: 400;
     font-size: 2.2rem;
@@ -195,7 +204,7 @@ footer .author {
 @media (width: 280px) {
     
     .big-logo {
-        top: 180px;
+        top: calc(50% - 134px/2);
     }
 
     .callout p {
@@ -208,7 +217,7 @@ footer .author {
 @media (width: 320px) {
     
     .big-logo {
-        top: 230px;
+        top: calc(50% - 134px/2);
     }
 
     .callout p {
@@ -224,7 +233,7 @@ footer .author {
 
 @media (min-width: 375px) {
     .big-logo {
-        top: 250px;
+        top: calc(50% - 134px/2);
     }
 }
 
@@ -262,7 +271,7 @@ footer .author {
 @media (width: 768px) {
    
     .big-logo {
-        top: 500px;
+        top: calc(50% - 134px/2);
     }
 
     .callout p {
@@ -314,10 +323,10 @@ footer .author {
     }
 }
 
-@media screen and (min-width: 834px) {
+@media screen and (max-width: 1024px) {
     
     .big-logo {
-        top: 490px;
+        top: calc(50% - 134px/2);
     }
 
     .callout p {
@@ -371,7 +380,7 @@ footer .author {
 
 }
 
-@media  screen and (min-width: 1024px) {
+@media  screen and (min-width: 1280px) {
   
     .hero {
         width: 100vw;
@@ -386,6 +395,123 @@ footer .author {
             
     }
    
+    .description {
+        display: grid;
+        grid-template-columns: 1fr 200px 1fr;
+        grid-template-rows: repeat(3, auto);
+        margin-top: -3px;
+        grid-template-areas: 
+        "box1 box1 box1"
+        "box2 box6 box3"
+        "box4 box7 box5";
+    }
+
+    .box1 {
+        grid-area: box1;
+    }
+
+    .box1 h1 {
+        font-size: 6.4rem;
+    }
+
+    .box1 h2 {
+        font-size: 4.8rem;
+    }
+
+    .box2 {
+        grid-area: box2;
+        
+    }
+
+    .box2 h3 {
+        text-align: left;
+        padding-left: 194px;
+        padding-top: 30px;
+
+    }
+
+    .box2 p {
+        text-align: left;
+        padding-left: 194px;
+        padding-top: 30px;
+    }
+
+
+
+    .box3 {
+        grid-area: box3;
+    }
+
+    .box3 h3 {
+        text-align: right;
+        padding-right: 194px;
+        padding-top: 30px;
+    }
+
+    .box3 p {
+        text-align: right;
+        padding-right: 194px;
+        padding-bottom: 30px;
+    }
+
+    .box4 {
+        grid-area: box4;
+        border-top: 2px solid #4F381D;
+    }
+
+    .box4 h3 {
+        text-align: left;
+        padding-left: 194px;
+        padding-top: 30px;
+    }
+
+    .box4 p {
+        text-align: left;
+        padding-left: 194px;
+        padding-bottom: 30px;
+        
+    }
+
+    .box5 {
+        grid-area: box5;
+        border-top: 2px solid #4F381D;
+    }
+
+    .box5 h3 {
+        text-align: right;
+        padding-right: 194px;
+        padding-top: 30px;
+    }
+
+    .box5 p {
+        text-align: right;
+        padding-right: 194px;
+        padding-bottom: 30px;
+    }
+
+    
+
+    .box6 {
+        display: block;
+        position: relative;
+        border: 2px solid #4F381D;
+        border-radius: 50%;
+        top: calc(50% - 100px);
+        width: 200px;
+        height: 200px;
+        grid-area: 2/2/4/3;
+        
+    }
+    
+    .box6 img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .box7 {
+        display: none;
+    }
+
     nav .mobile {
         display: none;
     }
@@ -395,7 +521,7 @@ footer .author {
         width: 897px;
         left: 50%;
         right: 50%;
-        top: 25%;
+        top: 35%;
         transform: translate(-50%, -50%);           
 
     }
@@ -427,6 +553,30 @@ footer .author {
         margin-right: 30px;
     }
 
+    .desktop-menu ul li:nth-child(4) {
+        border: 2px solid #FFFFFF;
+        border-radius: 30px;
+        padding: 8px 18px;
+    }
+
+    .desktop-menu ul li span {
+       display: inline-block; 
+       width: 26px;
+       height: 25px;
+       padding-top: 6px;
+    }
+
+    .desktop-menu ul li a {
+        display: flex;
+        align-items: center;
+               
+    }
+    .desktop-menu ul li a span {
+        margin-left: 10px;
+        background-image: url('/assets/icons/Whatsapp-Vector.svg');
+    }
+
+  
     .desktop-menu ul li a {
         color: #FFFFFF;
         text-decoration: none;
