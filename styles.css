@@ -17,26 +17,33 @@ html {
     font-size: 62.5%;
 }
 
+
 body {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.container {
 
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
+    align-items: center;  
+    width: 100%; 
     
 }
 
 
-.hero {
-    width: 100vw;
-    height: 100%;
+/* .hero {
+    width: 100%;
+    height: auto;
+    
         
-}
+} */
 
 .hero img {
-        width: 100%;
-        height: 100%;  
+    width: 100vw;
+    height: auto;  
+        
 }
         
         
@@ -69,8 +76,7 @@ body {
     position: absolute;
     width: 100%;
     top: 50%;
-    /* top: calc(50% - 100%/2);    */
-    
+        
 }
 
 
@@ -268,7 +274,13 @@ footer .author {
 
 
 
-@media (width: 768px) {
+@media (min-width: 768px) {
+
+    .hero img {
+        width: 100vw;
+        height: auto;  
+            
+    }
    
     .big-logo {
         top: calc(50% - 134px/2);
@@ -323,15 +335,96 @@ footer .author {
     }
 }
 
-@media screen and (max-width: 1024px) {
-    
-    .big-logo {
-        top: calc(50% - 134px/2);
+@media screen and (min-width: 1024px) {
+
+    nav .mobile {
+        display: none;
     }
 
+    .desktop-menu {
+        display: flex;
+        width: 100%;
+        height: auto;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #000000;
+        font-family: RootBeer;
+        padding-top: 20px;
+    }
+
+    .desktop-menu--logo img {
+        width: 155px;
+        height: 50px;
+        margin-left: 70px;
+    }
+
+    .desktop-menu ul li {
+        list-style: none;
+        display: inline-block;   
+        margin-right: 40px;   
+    }
+
+    .desktop-menu ul {
+        margin-right: 30px;
+    }
+
+    .desktop-menu ul li:nth-child(4) {
+        border: 2px solid #FFFFFF;
+        border-radius: 30px;
+        padding: 8px 18px;
+    }
+
+    .desktop-menu ul li span {
+       display: inline-block; 
+       width: 26px;
+       height: 25px;
+       padding-top: 6px;
+    }
+
+    .desktop-menu ul li a {
+        display: flex;
+        align-items: center;
+               
+    }
+    .desktop-menu ul li a span {
+        margin-left: 10px;
+        background-image: url('/assets/icons/Whatsapp-Vector.svg');
+    }
+
+  
+    .desktop-menu ul li a {
+        color: #FFFFFF;
+        text-decoration: none;
+        font-size: 2.6rem;
+
+    }
+
+    
+    .big-logo {
+        top: calc(25% - 354px/2);
+        
+    }
+
+    .big-logo img{
+        height: 254px;
+        width: 797px;
+    }
+
+    .hero img {
+        
+        width: 100vw;
+        height: auto;
+        object-fit: fill;
+    }
+    .callout {
+        background-image: url('/assets/imgs/beercup-desktop.png');
+        background-size: fill ;
+        width: 100vw;
+        height: auto;
+    }
     .callout p {
-        font-size: 4.7rem;
-        line-height: 120px;
+        font-size: 3.7rem;
+        line-height: 80px;
         padding: 15px;
     }
 
@@ -339,7 +432,7 @@ footer .author {
         display: grid;
         width: 100%;
         height: auto;
-        grid-template-columns: repeat(2, 417px);
+        grid-template-columns: repeat(2, auto);
         grid-template-rows: repeat(4, auto);
         
     }
@@ -364,10 +457,10 @@ footer .author {
 
     .img6 {
         
-        grid-area: 4 / 1 / 6 / 3;
+        grid-area: 2 / 3 / 3 / 5;
         aspect-ratio: 16 / 9;
         width: 100%; 
-        /* height: auto;   */
+        height: auto;  
           
         
     }
@@ -377,6 +470,7 @@ footer .author {
         height: 35px;
     }
 
+   
 
 }
 
@@ -393,6 +487,11 @@ footer .author {
         width: 100%;
         height: 100%;    
             
+    }
+
+    .big-logo {
+        top: 50%;          
+
     }
    
     .description {
@@ -517,82 +616,21 @@ footer .author {
     }
 
     .big-logo {
-        height: 354px;
-        width: 897px;
-        left: 50%;
-        right: 50%;
-        top: 35%;
-        transform: translate(-50%, -50%);           
+        left: calc(50% - 797px/2);
+    }
 
+    .big-logo img{
+        height: 254px;
+        width: 797px;
     }
     
-    .desktop-menu {
-        display: flex;
-        width: 100%;
-        height: auto;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #000000;
-        font-family: RootBeer;
-        padding-top: 20px;
-    }
-
-    .desktop-menu--logo img {
-        width: 155px;
-        height: 50px;
-        margin-left: 70px;
-    }
-
-    .desktop-menu ul li {
-        list-style: none;
-        display: inline-block;   
-        margin-right: 40px;   
-    }
-
-    .desktop-menu ul {
-        margin-right: 30px;
-    }
-
-    .desktop-menu ul li:nth-child(4) {
-        border: 2px solid #FFFFFF;
-        border-radius: 30px;
-        padding: 8px 18px;
-    }
-
-    .desktop-menu ul li span {
-       display: inline-block; 
-       width: 26px;
-       height: 25px;
-       padding-top: 6px;
-    }
-
-    .desktop-menu ul li a {
-        display: flex;
-        align-items: center;
-               
-    }
-    .desktop-menu ul li a span {
-        margin-left: 10px;
-        background-image: url('/assets/icons/Whatsapp-Vector.svg');
-    }
-
-  
-    .desktop-menu ul li a {
-        color: #FFFFFF;
-        text-decoration: none;
-        font-size: 2.6rem;
-
+   
+    .pics {
+       
+        grid-template-columns: repeat(4, auto);
+        grid-template-rows: repeat(2, auto);
+        
     }
     
 }
 
-@media  screen and (min-width: 1280px) {
-  
-    .big-logo {
-        top: 50%;          
-
-    }
-
-    
-    
-}
