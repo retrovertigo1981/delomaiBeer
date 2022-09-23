@@ -4,8 +4,7 @@
     font-family: RootBeer;
     src: url("/fonts/Root\ Beer.otf"), local("Root Beer");
     font-weight: bold;
-  }
-
+}
 
 * {
     margin: 0;
@@ -15,79 +14,130 @@
 
 html {
     font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
 }
 
 
-body {
-    width: 100vw;
-    overflow-x: hidden;
-}
 
-.container {
-
+nav {
     display: flex;
-    flex-direction: column;
-    align-items: center;  
-    width: 100%; 
-    
-}
-
-
-/* .hero {
-    width: 100%;
-    height: auto;
-    
-        
-} */
-
-.hero img {
-    width: 100vw;
-    height: auto;  
-        
-}
-        
-        
-
-
-.mobile {
-    position: absolute;
-    display: flex;
-    width: 100%;
     justify-content: space-between;
-    margin-top: 20px;
-    padding: 0 20px 0 20px;
-
+    padding: 20px 70px;
+    background-color: #000000;   
+    
 }
 
-.desktop-menu {
+nav .menu {
     display: none;
 }
 
-.mobile .nav-hammenu--mobile, .nav-wsp--mobile{
-    width: 26px;
-    height: 25px;
+nav .wsp {
+    display: none;
 }
-.mobile .nav-logo--mobile {
-    width: 79px;
-    height: 25px;
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    
+}
+.navbar-left a .nav-logo {
+    width: 155px;
+    height: 50px;
+}
+
+.navbar-right ul {
+    list-style:none;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    
+}
+
+.navbar-right ul li {
+    padding-right: 50px;
+}
+
+.navbar-right li a {
+    text-decoration: none;
+    font-family: RootBeer;
+    color: #FFFFFF;
+    font-size: 2.6rem;
+
+}
+
+.navbar-right ul li:nth-child(4) {
+    padding-right: 0;
+    border: 2px solid #FFFFFF;
+    border-radius: 30px;
+    padding: 8px 18px;
+    
+}
+
+.navbar-right ul li:nth-child(4):hover {
+    border: 2px solid #D0A35C;
+    transition: 400ms;
+    
+}
+
+.navbar-right ul li:nth-child(4):hover a {
+    color: #D0A35C;
+    transition: 400ms;
+    
+}
+
+.navbar-right ul li:nth-child(4):hover a span svg path {
+    fill: #D0A35C;
+    transition: 400ms;
+    
+}
+
+.navbar-right ul li a:hover {
+    color: #D0A35C;
+    fill: #D0A35C;
+    transition: 400ms;
+
+}
+
+
+.navbar-right ul li a span svg path{
+    display: inline-block;
+    width: 26px;
+    height: 25px;  
+    
+}
+
+.hero {
+    width: 100%;
+    height: auto;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
 }
 
 .big-logo {
     position: absolute;
-    width: 100%;
     top: 50%;
-        
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
+.big-logo img {
+    width: 897px;
+    height: 354px;
+}
 
 .description {
     display: flex;
     flex-direction: column;
-    margin: -2px;
+    margin-top: -3px;
     width: 100%;
     height: auto;
     font-family: RootBeer;
     background: #D0A35C;
+    
         
 }
 
@@ -96,6 +146,7 @@ body {
     margin-block-start: 26px;
     margin-block-end: 14px;
     text-align: center;
+    
 }
 
 .description h2 {
@@ -108,6 +159,11 @@ body {
     text-align: center;
     margin-block-start: 20px;
 
+}
+
+.description h3 span img {
+    width: 35px;
+    height: 98px;
 }
 
 .description p {
@@ -129,42 +185,19 @@ body {
 .callout {
     display: grid;
     align-items: center;
-    background-image: url('/assets/imgs/beercup-mobile.webp');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100vw;
-    height:  100%;
-}
-
-/* .callout img {
+    background: url('/assets/imgs/beercup-desktop.webp') center / cover no-repeat;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-} */
-
-
+    height: auto;
+}
 
 .callout p {
-    
     font-family: 'Beth Ellen', cursive;
-    font-weight: 400;
-    font-size: 2.2rem;
-    line-height: 49px;
-    text-align: center;
-    padding: 15px 30px;
-    
+    font-size: 3.7rem;
     color: #FFFFFF;
-
+    line-height: 80px;
+    padding: 40px;
+    text-align: center;
 }
-
-.pics {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-
 
 footer {
     display: flex;
@@ -205,88 +238,11 @@ footer .author {
 }
 
 
- /* ----------------------MEDIA QUERIES------------------- */
+/* ----------------------media queries------------------- */
 
-@media (width: 280px) {
-    
-    .big-logo {
-        top: calc(50% - 134px/2);
-    }
+@media screen and (min-width: 761px) {
 
-    .callout p {
-        font-size: 1.6rem;
-        line-height: 49px;
-        
-    }
-}
-
-@media (width: 320px) {
-    
-    .big-logo {
-        top: calc(50% - 134px/2);
-    }
-
-    .callout p {
-        font-size: 1.8rem;
-        line-height: 49px;
-        
-    }
-}
-
-
-
-
-
-@media (min-width: 375px) {
-    .big-logo {
-        top: calc(50% - 134px/2);
-    }
-}
-
-
-
-@media (min-width: 540px) {
-    .big-logo {
-        top: 390px;
-    }
-
-    .callout p {
-        font-size: 3.3rem;
-        line-height: 69px;
-        top: 2150px;
-    }
-
-    .pics .img1 {
-        aspect-ratio: 0.5;
-    }
-}
-
-@media (min-width: 600px) {
-    
-    .callout p {
-        font-size: 3.3rem;
-        line-height: 100px;
-        top: 2200px;
-    }
-
-   
-}
-
-
-
-@media (min-width: 768px) {
-
-    .hero img {
-        width: 100vw;
-        height: auto;  
-            
-    }
-   
-    .big-logo {
-        top: calc(50% - 134px/2);
-    }
-
-    .callout p {
+   .callout p {
         font-size: 5rem;
         line-height: 115px;
         top: 2500px;
@@ -296,16 +252,17 @@ footer .author {
         display: grid;
         width: 100%;
         height: auto;
-        grid-template-columns: repeat(2, 384px);
-        grid-template-rows: repeat(4, 329px);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
         
     }
 
     .img1 {
         
         grid-area: 1 / 1 / 3 / 2;
-        width: 384px;
-        height: 658px;
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 0.5;
         
     }
 
@@ -323,177 +280,88 @@ footer .author {
         
         grid-area: 4 / 1 / 6 / 3;
         aspect-ratio: 16 / 9;
-        width: 100%; 
-        /* height: auto;   */
-          
+        object-fit:fill;         
+        width: 100%;
+    }
+
+   
+}
+
+@media screen and (max-width: 760px) {
+    
+    nav .menu {
+        display: block;
+    }
+
+    nav .wsp {
+        display: flex;
+        align-items: center;
+             
+
+    }
+
+    nav .wsp img {
+        width: 30px;
+        height: 31px;
         
     }
 
-    .mobile .nav-logo--mobile {
-        width: 89px;
-        height: 35px;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-
-    nav .mobile {
+    .navbar-right {
         display: none;
     }
 
-    .desktop-menu {
-        display: flex;
+    .big-logo img {
         width: 100%;
-        height: auto;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #000000;
-        font-family: RootBeer;
-        padding-top: 20px;
-    }
-
-    .desktop-menu--logo img {
-        width: 155px;
-        height: 50px;
-        margin-left: 70px;
-    }
-
-    .desktop-menu ul li {
-        list-style: none;
-        display: inline-block;   
-        margin-right: 40px;   
-    }
-
-    .desktop-menu ul {
-        margin-right: 30px;
-    }
-
-    .desktop-menu ul li:nth-child(4) {
-        border: 2px solid #FFFFFF;
-        border-radius: 30px;
-        padding: 8px 18px;
-    }
-
-    .desktop-menu ul li span {
-       display: inline-block; 
-       width: 26px;
-       height: 25px;
-       padding-top: 6px;
-    }
-
-    .desktop-menu ul li a {
-        display: flex;
-        align-items: center;
-               
-    }
-    .desktop-menu ul li a span {
-        margin-left: 10px;
-        background-image: url('/assets/icons/Whatsapp-Vector.svg');
-    }
-
-  
-    .desktop-menu ul li a {
-        color: #FFFFFF;
-        text-decoration: none;
-        font-size: 2.6rem;
-
-    }
-
-    
-    .big-logo {
-        top: calc(25% - 354px/2);
-        
-    }
-
-    .big-logo img{
-        height: 254px;
-        width: 797px;
-    }
-
-    .hero img {
-        
-        width: 100vw;
-        height: auto;
-        object-fit: fill;
-    }
-    .callout {
-        background-image: url('/assets/imgs/beercup-desktop.png');
-        background-size: fill ;
-        width: 100vw;
-        height: auto;
-    }
-    .callout p {
-        font-size: 3.7rem;
-        line-height: 80px;
-        padding: 15px;
     }
 
     .pics {
-        display: grid;
+        display: flex;
+        flex-direction: column;
         width: 100%;
-        height: auto;
-        grid-template-columns: repeat(2, auto);
-        grid-template-rows: repeat(4, auto);
-        
-    }
-
-    .img1 {
-        
-        grid-area: 1 / 1 / 3 / 2;
-        width: 100%;
-        height: 100%;
-        
-    }
-
-    .img2, .img3, .img4, .img5 {
-        aspect-ratio: 1 / 1;
-        width: 100%;
-        height: 100%;
-        
-        
-        
-        
-    }
-
-    .img6 {
-        
-        grid-area: 2 / 3 / 3 / 5;
-        aspect-ratio: 16 / 9;
-        width: 100%; 
-        height: auto;  
-          
-        
-    }
-
-    .mobile .nav-logo--mobile {
-        width: 89px;
-        height: 35px;
-    }
-
-   
-
+    } 
 }
 
-@media  screen and (min-width: 1280px) {
-  
-    .hero {
-        width: 100vw;
-        height: auto;
 
-   }
 
-   
-    .hero img {
-        width: 100%;
-        height: 100%;    
-            
+
+@media screen and (max-width: 880px) {
+    nav {
+        padding: 10px 10px;
     }
 
     .big-logo {
-        top: 50%;          
-
+        width: 100%;
+        height: auto;
     }
+
+    .big-logo img {
+        width: 100%;
+        height: auto;
+    }
+
+    .callout {
+        
+        background-image: url('/assets/imgs/beercup-mobile.webp');
+        width: 100%;
+        height:  100%;
+    }
+    
+    .callout p {
+        
+        font-weight: 400;
+        font-size: 2.2rem;
+        line-height: 49px;
+        padding: 15px 30px        
+        
+    }
+
+  
+
    
+}
+
+
+@media screen and (min-width: 1280px) {
     .description {
         display: grid;
         grid-template-columns: 1fr 200px 1fr;
@@ -611,26 +479,21 @@ footer .author {
         display: none;
     }
 
-    nav .mobile {
-        display: none;
-    }
-
-    .big-logo {
-        left: calc(50% - 797px/2);
-    }
-
-    .big-logo img{
-        height: 254px;
-        width: 797px;
-    }
-    
-   
     .pics {
        
         grid-template-columns: repeat(4, auto);
         grid-template-rows: repeat(2, auto);
         
     }
-    
-}
 
+    .img6 {
+        
+        grid-area: 2 / 3 / 3 / 5;
+        aspect-ratio: 16 / 9;
+        width: 100%; 
+        height: auto;  
+          
+        
+    }
+
+}
