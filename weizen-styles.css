@@ -114,7 +114,7 @@ nav .wsp {
 .navbar-right ul li:nth-child(2):active .beers-menu {
     opacity: 1;
     transition: opacity 400ms;
-    transition-delay: ;
+    transition-delay: 400ms ;
 }
 
 
@@ -183,7 +183,7 @@ nav .wsp {
    
 }
 
-.ipa {
+.weizen {
     width: 100%;
     height: auto;
     display: grid;
@@ -218,12 +218,12 @@ nav .wsp {
 
 }
 
-.ipa .texts {
+.weizen .texts {
     padding: 20px 40px;
     align-self: flex-start;
 }
 
-.ipa .texts h1 {
+.weizen .texts h1 {
     font-family: RootBeer;
     font-style: normal;
     font-weight: 400;
@@ -233,7 +233,7 @@ nav .wsp {
     
 }
 
-.ipa .texts p {
+.weizen .texts p {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -243,11 +243,11 @@ nav .wsp {
     color: #000000;
     margin-bottom: 10px;
 }
-.ipa ul {
+.weizen ul {
     padding-left: 20px;
     padding-top: 40px;
 }
-.ipa .texts ul li {
+.weizen .texts ul li {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -257,12 +257,6 @@ nav .wsp {
     margin-bottom: 20px;
 
 }
-
-
-
-
-
-
 
 footer {
     display: flex;
@@ -307,7 +301,7 @@ footer .author {
 
 
 @media screen and (max-width:835px) {
-    .ipa {
+    .weizen {
         display: flex;
         flex-direction: column;
     }
@@ -363,12 +357,12 @@ footer .author {
 }
 
 @media screen and (min-width: 1920px) {
-    .ipa .texts {
+    .weizen .texts {
         padding: 20px 200px;
              
     }
 
-    .ipa .texts h1 {
+    .weizen .texts h1 {
        
         font-size: 5.2rem;
         line-height: 55px;
@@ -376,13 +370,13 @@ footer .author {
         
     }
     
-    .ipa .texts p {
+    .weizen .texts p {
         
         font-size: 2.2rem;
         
     }
 
-    .ipa .texts ul li {
+    .weizen .texts ul li {
         font-size: 2.2rem;
     }
     

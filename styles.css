@@ -106,13 +106,16 @@ nav .wsp {
 
 .navbar-right ul li:nth-child(2):hover .beers-menu  {
     opacity: 1;
+    z-index: 1;
     transition: opacity 400ms;
     transition-delay: 400ms;
 }
  
 .navbar-right ul li:nth-child(2):active .beers-menu {
     opacity: 1;
+    z-index: 1;
     transition: opacity 400ms;
+    transition-delay: 400ms;
 }
 
 
