@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=Beth+Ellen&family=Roboto:wght@300;500&display=swap');
+
+
+
+
+@font-face {
+    font-family: RootBeer;
+    src: url("/fonts/Root\ Beer.otf"), local("Root Beer");
+    font-weight: bold;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+nav {
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    grid-template-rows: repeat(2, max-content);
+    justify-content: space-between;
+    padding: 20px 70px;
+    background-color: #000000; 
+}
+
+nav .menu {
+    display: none;    
+}
+
+nav .wsp {
+    display: none;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    
+}
+.navbar-left a .nav-logo {
+    width: 155px;
+    height: 50px;
+}
+
+.navbar-right ul {
+    list-style:none;
+    display: grid;
+    grid-template-columns: repeat(4, max-content);
+    align-items: center;
+    height: 60px;
+    
+}
+
+.navbar-right ul li {
+    padding-right: 50px;
+}
+
+.navbar-right li a {
+    text-decoration: none;
+    font-family: RootBeer;
+    color: #FFFFFF;
+    font-size: 2.6rem;
+
+}
+
+.navbar-right ul li:nth-child(4) {
+    /* padding-right: 0; */
+    border: 2px solid #FFFFFF;
+    border-radius: 30px;
+    padding: 8px 18px;
+    
+}
+
+.navbar-right ul li:nth-child(4):hover {
+    border: 2px solid #D0A35C;
+    transition: 400ms;
+    
+}
+
+.navbar-right ul li:nth-child(4):hover a {
+    color: #D0A35C;
+    transition: 400ms;
+    
+}
+
+.navbar-right ul li:nth-child(4):hover a span svg path {
+    fill: #D0A35C;
+    transition: 400ms;
+    
+}
+
+.navbar-right ul li a:hover {
+    color: #D0A35C;
+    fill: #D0A35C;
+    transition: 400ms;
+
+}
+
+.navbar-right ul li:nth-child(2):hover .beers-menu  {
+    opacity: 1;
+    transition: opacity 400ms;
+    transition-delay: 400ms;
+    z-index: 1;
+}
+ 
+.navbar-right ul li:nth-child(2):active .beers-menu {
+    opacity: 1;
+    transition: opacity 400ms;
+    transition-delay: 400ms ;
+}
+
+
+.navbar-right ul li a span svg path{
+    display: inline-block;
+    width: 26px;
+    height: 25px;  
+    
+}
+
+.mobile-menu {
+    /* opacity: 0; */
+    position: absolute;
+    top: 9.9%;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    z-index: 1;
+    
+
+    transform: translateX(-100%);
+    transition: transform 300ms;  
+    
+    
+}
+
+.active {
+    /* opacity: 1; */
+    transform: translateX(0);
+    transition: transform 400ms;
+}
+
+
+.mobile-menu ul {
+    padding-left: 0px;
+}
+.mobile-menu ul li{
+    margin-bottom: 20px;
+}
+
+.mobile-menu ul li ul {
+    padding-top: 20px;
+}
+.mobile-menu ul li a {
+    text-decoration: none;
+    font-family: RootBeer;
+    color: #FFFFFF;
+    font-size: 3.5rem;
+    letter-spacing: 3px;
+}
+
+.navbar-right .beers-menu {
+    position: absolute;
+    display: grid;
+    grid-template-rows: repeat(5, max-content);
+    background-color: #000000;
+    gap: 10px;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 400ms;
+    transition-delay: 400ms;
+   
+}
+
+.beerpacks {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #D0A35C;
+    align-items: center;
+    justify-content: center;
+
+   
+
+}               
+
+.pics {
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    gap: 30px;
+
+    
+}
+.pics div {
+    width: 100%;
+    height: auto;
+    
+}
+
+.pics div img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+    margin: 0 auto;
+    
+
+}
+
+.beerpacks .texts {
+    padding: 10px 40px;
+    align-self: flex-start;
+    
+}
+
+.beerpacks .texts h1 {
+    font-family: RootBeer;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 55px;
+    color: #000000;
+    
+}
+
+.beerpacks .texts p {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 40px;
+    text-align: justify;
+    color: #000000;
+    margin-bottom: 10px;
+}
+.beerpacks ul {
+    padding-left: 20px;
+    padding-top: 40px;
+}
+.beerpacks .texts ul li {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 40px;
+    color: #000000;
+    margin-bottom: 20px;
+
+}
+
+.cta-wsp {
+    display: flex;  
+    flex-direction: row;
+    width: 190px;
+    height: 50px; 
+    justify-content: center;
+    
+    border: 2px solid #000000;
+    border-radius: 30px;
+    padding: 8px 18px;
+    margin-bottom: 30px;
+}
+
+.cta-wsp a {
+    font-family: RootBeer;
+    font-size: 2.6rem;
+    text-decoration: none;
+    color: #000000;
+}
+
+.beerpacks .mobile {
+    display: none;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: -2px;
+    background-color: #000000;
+
+}
+
+footer .logo {
+    width: 110px;
+    height: 36px;
+    margin-top: 50px;
+}
+
+footer p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: 11px;
+    padding: 0 48px;
+}
+
+footer .author {
+    color: #4c4b4bcc;
+    padding-bottom: 20px;
+}
+
+.social {
+    display: flex;
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+
+/* -------------------------- media queries ----------------------- */
+
+
+@media screen and (max-width:835px) {
+    .beerpacks {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 761px) {
+
+    .mobile-menu {
+        opacity: 0;
+    }  
+   
+}
+
+@media screen and (max-width: 760px) {
+    nav {
+        display: flex;
+    }
+    nav .menu {
+        display: block
+    }
+
+    nav .wsp {
+        display: flex;
+        align-items: center;
+
+             
+
+    }
+
+    nav .wsp img {
+        width: 30px;
+        height: 31px;
+        
+    }
+
+    .navbar-right {
+        display: none;
+    }
+
+    .pics {
+        flex-wrap: wrap;
+    }
+
+   .beerpacks .desktop {
+    display: none;
+   }
+
+   .beerpacks .mobile {
+    display: flex;
+   }
+
+   
+}
+
+
+
+
+@media screen and (max-width: 880px) {
+    nav {
+        padding: 10px 10px;
+        
+    } 
+}
+
+@media screen and (min-width: 1920px) {
+    .beerpacks .texts {
+        padding: 20px 200px;
+             
+    }
+
+    .beerpacks .texts h1 {
+       
+        font-size: 5.2rem;
+        line-height: 55px;
+       
+        
+    }
+    
+    .beerpacks .texts p {
+        
+        font-size: 2.2rem;
+        
+    }
+
+    .beerpacks .texts ul li {
+        font-size: 2.2rem;
+    }
+    
+}
+
