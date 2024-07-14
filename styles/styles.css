@@ -386,6 +386,13 @@ footer .author {
   }
 }
 
+@media screen and (max-width: 835px) {
+  .hero {
+    height: 100%;
+    aspect-ratio: 9 / 16;
+  }
+}
+
 @media screen and (max-width: 880px) {
   nav {
     padding: 10px 10px;
