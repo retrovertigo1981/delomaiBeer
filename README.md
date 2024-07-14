@@ -1,11 +1,10 @@
-```markdown
 # Proyecto de Sitio Web de Cerveza 🍺
 
 ¡Bienvenido al proyecto de inicio en desarrollo web para la marca de cerveza Delomai! Este proyecto está desarrollado utilizando HTML, CSS y JavaScript puro, sin dependencias de npm ni archivos `package.json`. A continuación, se detallan los contenidos y la estructura del proyecto.
 
 ## Estructura del Proyecto 📁
-```
 
+```bash
 .vscode/
 assets/
 ├── icons/
@@ -62,7 +61,7 @@ styles/
 index.html
 main.js
 
-````
+```
 
 ## Descripción del Proyecto 📝
 
@@ -83,7 +82,7 @@ Para utilizar este proyecto, simplemente clona el repositorio y abre `index.html
 git clone [URL del repositorio]
 cd [nombre-del-repositorio]
 open index.html
-````
+```
 
 ## Mejora del Rendimiento 🚄
 
@@ -105,7 +104,3 @@ Este proyecto está licenciado bajo la Licencia MIT.
 ---
 
 ¡Gracias por visitar nuestro proyecto! Esperamos que disfrutes navegando por el sitio web de Delomai. 🍻
-
-```
-
-```
